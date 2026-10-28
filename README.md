@@ -4,7 +4,7 @@ A black-and-gold Windows mouse cursor theme that fuses Binance's diamond geometr
 
 [中文完整说明](使用说明.txt)
 
-![preview](preview.png)
+![preview](https://github.com/user-attachments/assets/5f92a0f1-45b0-47e9-8cf3-f6dea22736dc)
 
 > Unofficial fan artwork. Not affiliated with, endorsed by, or sponsored by Binance, Bitcoin, or any related organisation.
 
