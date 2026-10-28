@@ -1,0 +1,117 @@
+﻿币安 × 比特币 · 黑金鼠标指针
+
+适用：Windows 10 / Windows 11 当前用户。
+
+完整版包含 48 款静态指针：17 个标准系统状态、1 个比特币备选、30 个扩展状态。
+每一款都提供 32 / 48 / 64 / 96 / 256 五档尺寸（256 是 Windows 允许的最大指针尺寸）。
+
+安装
+1. 先把压缩包完整解压到一个文件夹。
+2. 默认双击 install.cmd，使用多尺寸资源，让 Windows 自动选择。
+   也可以单独双击 install-32px.cmd、install-48px.cmd、install-64px.cmd、
+   install-96px.cmd 或 install-256px.cmd，分别使用对应尺寸的单帧 CUR 文件，
+   并把 Windows 指针大小同步设为 32 / 48 / 64 / 96 / 256 px。
+   安装成功后立即生效，不需要管理员权限。
+3. 若某个已打开的软件仍显示旧指针，重新打开该软件即可。
+
+恢复
+双击 restore.cmd，恢复到最近一次安装前的指针，并还原当时的系统指针大小。
+重复安装会分别备份；每次恢复只回退一层，不覆盖旧备份，控制台会提示还剩几层。
+恢复后保留所有指针文件及备份，不删除文件。
+
+安装位置
+%LOCALAPPDATA%\BinanceBitcoinCursors\installs\时间与编号\
+每次安装目录中还保留独立的 restore.cmd，可用于恢复。
+安装成功后，即使移动原解压目录，指针仍然可用。
+
+系统内切换
+打开“鼠标属性”→“指针”，在“方案”中选择：
+Binance x Bitcoin - Black Gold
+固定尺寸方案会追加 - 32px、- 48px、- 64px、- 96px 或 - 256px。
+也可以通过“浏览”手动替换单个指针文件。
+
+尺寸与缩放
+cursors 文件夹：多尺寸资源。
+sizes\32px、sizes\48px、sizes\64px、sizes\96px、sizes\256px：各自独立的单尺寸资源。
+各目录包含 17 个标准系统状态、1 个比特币备选指针及扩展素材。
+安装器会复制所选目录下的全部 CUR 文件，系统自动映射其中 17 个标准状态。
+备选及扩展图标不会自动创建新的系统指针状态，可在“鼠标属性”中手动选择。
+固定尺寸指的是 CUR 文件内的图像尺寸。Windows 会按“设置 → 辅助功能 → 鼠标指针大小”
+（注册表 CursorBaseSize）统一缩放所有指针，所以 install-32/48/64/96/256px.cmd 会把该值
+一并设为对应 px，切换尺寸才能立刻看出差别；install.cmd 用多尺寸资源，
+不会改动这个值。restore.cmd 会把该值还原成安装前的设置。
+显示缩放（DPI）会在此基础上继续放大或缩小指针，资源尺寸不等于屏幕上的绝对像素尺寸。
+256px 是 CUR 格式与 Windows 指针大小的双重上限（宽高字段单字节、最大滑块档位 256），
+无法再做大三倍的 288px；256px 素材由 96px 素材高质量放大生成，边缘会比原生尺寸略软。
+
+17 种 Windows 指针状态
+01-normal.cur       正常选择
+02-help.cur         帮助选择
+03-working.cur      后台运行
+04-busy.cur         忙
+05-precision.cur    精确选择
+06-text.cur         文本选择
+07-handwriting.cur  手写
+08-unavailable.cur  不可用
+09-resize-ns.cur    垂直调整
+10-resize-we.cur    水平调整
+11-resize-nwse.cur  对角调整 1
+12-resize-nesw.cur  对角调整 2
+13-move.cur         移动
+14-alternate.cur    候选选择
+15-link.cur         链接选择
+16-pin.cur          位置选择
+17-person.cur       人员选择
+18-bitcoin-normal.cur 比特币普通选择备选（手动选用）
+
+新增 30 款扩展指针
+19-context-menu.cur     上下文菜单
+20-copy.cur             拖拽复制
+21-shortcut.cur         快捷方式／别名
+22-no-drop.cur          禁止放下
+23-cell.cur             单元格选择
+24-vertical-text.cur    竖排文本选择
+25-grab.cur             可抓取
+26-grabbing.cur         正在抓取
+27-zoom-in.cur          放大
+28-zoom-out.cur         缩小
+29-column-resize.cur    调整列宽
+30-row-resize.cur       调整行高
+31-resize-n.cur         向上调整
+32-resize-s.cur         向下调整
+33-resize-w.cur         向左调整
+34-resize-e.cur         向右调整
+35-resize-nw.cur        向左上调整
+36-resize-ne.cur        向右上调整
+37-resize-sw.cur        向左下调整
+38-resize-se.cur        向右下调整
+39-scroll-all.cur       全方向自动滚动
+40-scroll-n.cur         向上滚动
+41-scroll-s.cur         向下滚动
+42-scroll-w.cur         向左滚动
+43-scroll-e.cur         向右滚动
+44-scroll-nw.cur        向左上滚动
+45-scroll-ne.cur        向右上滚动
+46-scroll-sw.cur        向左下滚动
+47-scroll-se.cur        向右下滚动
+48-wait-hourglass.cur   沙漏等待备选
+
+关于仍然显示原图标的场景
+安装成功时会显示“17/17”，表示 Windows 标准指针设置已完整写入并读回。
+如系统仍使用默认方案，可在鼠标属性的“指针”页选择对应尺寸的本主题。
+若只有某个软件仍显示旧指针，先重新打开该软件。
+拖拽、缩放、抓取、自动滚动等图标经常由应用自己提供。
+本包已提供这些扩展 CUR 素材，供支持自定义指针的软件或网页使用；
+Windows 的系统方案没有对应的全局映射项，安装器不能强制替换应用内部图标。
+
+只读检查（可选）
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\install.ps1 -ValidateOnly
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\install.ps1 -Size 48 -ValidateOnly
+检查会确认全部 CUR 文件可加载；固定尺寸还会检查每个文件只有 1 个匹配尺寸的图像帧。
+只读检查不安装、不应用、不修改注册表。
+
+安装脚本仅在你运行后修改当前用户的鼠标指针设置。
+安装前会校验全部文件并保存原值，运行中失败会尝试自动恢复。
+成功前会读回确认全部 17 个系统指针路径，控制台显示 17/17。
+其他应用自行绘制的鼠标指针不受系统方案控制。
+这是一套独立设计的主题素材，不代表币安或比特币相关机构的官方产品。
